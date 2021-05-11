@@ -1,0 +1,12 @@
+<h1>Users#new</h1>
+<p>Create a new user here!</p>
+
+<%= form_for @user do |form|%>
+    <%= form.label "Email Address:"%>
+    <%= form.text_field :email %>
+    <%= form.label "Password:"%>
+    <%= form.password_field :password %>
+    <%= form.submit %>
+<% end %>
+
+<h3> <%= link_to "Back", root_path %></h4>

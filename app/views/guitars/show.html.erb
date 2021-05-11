@@ -1,0 +1,14 @@
+<h1>Guitars#show</h1>
+
+<h2> <%= @guitar.title %> </h2>
+    <ul>
+        <li>Price: $<%= @guitar.price%></li>
+        <li>Belongs to: <%= @guitar.user.email %></li>
+    </ul>
+    <p>Description: <%= @guitar.description %> </p>
+    <p> <%= link_to "Delete", guitar_path(@guitar), 
+                            method: :delete,
+                            data: { confirm: "Are you sure?"}%> </p>
+    <p> <%= link_to "Edit", edit_guitar_path %> </p>
+
+    <h3> <%= link_to "BACK", guitars_index_path %> </h3>

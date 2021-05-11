@@ -1,0 +1,16 @@
+<h1>Users Guitar Listing </h1>
+
+
+<h2> <%= @user.email %> </h3>
+<h3> <%= link_to "Create new listing", new_guitar_path %></h3>
+
+   <% @user.guitars.each do |guitar| %> 
+
+   <h2> <%=link_to guitar.title, guitar %> </h2>
+    <ul>
+        <li>Price: $<%= guitar.price%></li>
+        <li>Belongs to: <%= guitar.user.email %></li>
+    </ul>
+<% end %>
+
+<h3> <%= link_to "Back", root_path %></h4>

@@ -1,0 +1,14 @@
+<h1>Guitars#new</h1>
+<p>Find me in app/views/guitars/new.html.erb</p>
+
+<%= form_for @guitar do |form|%>
+    <%= form.label "Title:"%>
+    <%= form.text_field :title %>
+    <%= form.label "Price:"%>
+    <%= form.text_field :price %>
+    <%= form.label "description:"%>
+    <%= form.text_area :description %>
+    <%= form.hidden_field :user_id, value: params[:id] %>
+    <%= form.submit %>
+
+<% end %>

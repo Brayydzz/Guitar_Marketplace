@@ -1,0 +1,12 @@
+<h1>Guitars#index</h1>
+<p>Find me in app/views/guitars/index.html.erb</p>
+
+<% @guitars.each do |guitar|%>
+    <h2> <%=link_to guitar.title, guitar %> </h2>
+    <ul>
+        <li>Price: $<%=guitar.price%></li>
+        <li>Belongs to: <%= guitar.user.email %></li>
+    </ul>
+    <p>Description: <%= guitar.description %> </p>
+<% end %>
+<h3> <%= link_to "Back", root_path %></h4>

@@ -1,0 +1,7 @@
+<h1>Users</h1>
+<%= link_to "New User", new_user_path %>
+<% @users.each do |user|%>
+    <h3> <%= user.email %> </h3>
+    <p>Listing Count: <%= user.guitars.count %> </p>
+    <%= link_to "Show", user %>
+<% end %>
